@@ -31,7 +31,7 @@ const Navbar: React.VFC = () => {
         }`}
       >
         <button className="mr-auto hover:opacity-50">{bars}</button>
-        <h4 className="fixed text-center d-block w-full font-bold">
+        <h4 className="text-center d-block w-full font-bold">
           My Tailwind App
         </h4>
         <button
