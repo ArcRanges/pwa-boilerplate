@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Dispatch, SetStateAction } from 'react'
 import { SIZE_MD } from 'src/constants/defaults'
 
-const bars = <i className="uil uil-bars text-5xl cursor-pointer "></i>
-const sun = <i className="uil uil-sun text-white text-5xl cursor-pointer "></i>
-const moon = <i className="uil uil-moon text-5xl cursor-pointer "></i>
+const bars = <i className="uil uil-bars text-4xl cursor-pointer "></i>
+const sun = <i className="uil uil-sun text-4xl cursor-pointer "></i>
+const moon = <i className="uil uil-moon text-4xl cursor-pointer "></i>
 
-const Navbar: React.VFC = () => {
+const Navbar = (props: {
+  collapsed: boolean
+  toggleSidebar: Dispatch<SetStateAction<boolean>>
+}) => {
+  const { collapsed = false, toggleSidebar } = props
   const theme = localStorage.getItem('theme')
   const [state, setState] = useState({
     windowWidth: window.innerWidth,
@@ -30,7 +34,12 @@ const Navbar: React.VFC = () => {
           windowWidth > SIZE_MD ? 'md:hidden' : 'flex'
         }`}
       >
-        <button className="mr-auto hover:opacity-50">{bars}</button>
+        <button
+          className="mr-auto hover:opacity-50"
+          onClick={() => toggleSidebar(!collapsed)}
+        >
+          {bars}
+        </button>
         <h4 className="text-center d-block w-full font-bold">
           My Tailwind App
         </h4>
@@ -46,30 +55,13 @@ const Navbar: React.VFC = () => {
           windowWidth > SIZE_MD ? 'flex' : 'hidden'
         }`}
       >
+        <button
+          className="mr-2 hover:opacity-50"
+          onClick={() => toggleSidebar(!collapsed)}
+        >
+          {bars}
+        </button>
         <h4 className="w-full font-bold">My Tailwind App</h4>
-
-        <ul className="list-none">
-          <li className="inline mr-3">
-            <a className="hover:opacity-50 " href="/">
-              Home
-            </a>
-          </li>
-          <li className="hover:opacity-50 inline mr-3">
-            <a className="hover:opacity-50 " href="/">
-              Services
-            </a>
-          </li>
-          <li className="hover:opacity-50 inline mr-3">
-            <a className="hover:opacity-50 " href="/">
-              About
-            </a>
-          </li>
-          <li className="hover:opacity-50 inline mr-3">
-            <a className="hover:opacity-50 " href="/">
-              Contact
-            </a>
-          </li>
-        </ul>
       </div>
     </>
   )

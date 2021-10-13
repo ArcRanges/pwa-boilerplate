@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 
 function App() {
   const theme = localStorage.getItem('theme')
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true)
   // const [appTheme, setAppTheme] = useState(theme)
 
   useEffect(() => {
@@ -21,7 +23,14 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        collapsed={sidebarCollapsed}
+        toggleSidebar={setSidebarCollapsed}
+      />
+      <Sidebar
+        collapsed={sidebarCollapsed}
+        toggleSidebar={setSidebarCollapsed}
+      />
       {/* <div className="container">
         <div className="w-100"></div>
         <div className="flex flex-col p-8 m-3 bg-white rounded-md shadow-md dark:bg-gray-800">
