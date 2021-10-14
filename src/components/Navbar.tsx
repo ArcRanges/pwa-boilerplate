@@ -61,7 +61,9 @@ const Navbar = (props: {
         >
           {bars}
         </button>
-        <h4 className="w-full font-bold">My Tailwind App</h4>
+        <h4 className="w-full font-bold">
+          <a href="/">My Tailwind App</a>
+        </h4>
       </div>
     </>
   )
