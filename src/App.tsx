@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
+
 import Content from './components/Content'
-import IconButton from './components/IconButton'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import Scrollable from './components/Scrollable'
+import Categories from './components/Categories'
+import ProductCard from './components/ProductCard'
 
 function App() {
   const theme = localStorage.getItem('theme')
@@ -36,44 +37,56 @@ function App() {
         toggleDarkMode={() => setTheme(appTheme === 'dark' ? '' : 'dark')}
       />
       <Content>
-        <h4 className="font-bold text-blue-400">Hot Categories</h4>
-        <Scrollable>
-          <IconButton
-            iconName="trees"
-            className="inline-block mr-3"
-            iconClassName="text-green-500"
-          />
-          <IconButton
-            iconName="flower"
-            className="inline-block mr-3"
-            iconClassName="text-red-500"
-          />
-          <IconButton
-            iconName="cell"
-            className="inline-block mr-3"
-            iconClassName="text-blue-500"
-          />
-          <IconButton
-            iconName="flower"
-            className="inline-block mr-3"
-            iconClassName="text-yellow-500"
-          />
-          <IconButton
-            iconName="cloud"
-            className="inline-block mr-3"
-            iconClassName="text-purple-500"
-          />
-          <IconButton
-            iconName="moon"
-            className="inline-block mr-3"
-            iconClassName="text-black-500"
-          />
-          <IconButton
-            iconName="sun"
-            className="inline-block mr-3"
-            iconClassName="text-yellow-500"
-          />
-        </Scrollable>
+        <Categories />
+        <h4 className="font-bold text-blue-400">Hottest Products</h4>
+        <div className="flex flex-wrap justify-between items-center">
+          <div className="w-1/2 p-1">
+            <ProductCard
+              img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/06/FIREOG2EDIT-768x768.jpg"
+              name="Fyre OG AAAA"
+              price="$120.99"
+              salePrice="$80.99"
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <ProductCard
+              img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/07/TRAINWRECKEDIT2-400x400.jpg"
+              name="Trainwreck AAAA"
+              price="$180.99"
+              salePrice="$80.99"
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <ProductCard
+              img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/09/DURBANPOISON1-400x400.jpg"
+              name="Durban Poison AAAA"
+              price="$220.99"
+              salePrice="$80.99"
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <ProductCard
+              img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/03/MIXANDMATCH-400x400.jpg"
+              name="Mix & Match - Concentrates 7x 1g"
+              price="$140.99"
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <ProductCard
+              img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/09/PINKGASMASK1-400x400.jpg"
+              name="Pink Gas Mask AAAA"
+              price="$240.99"
+              salePrice="$140.99"
+            />
+          </div>
+          <div className="w-1/2 p-1">
+            <ProductCard
+              img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/03/MIXANDMATCH-400x400.jpg"
+              name="Mix & Match - Concentrates 7x 1g"
+              price="$140.99"
+            />
+          </div>
+        </div>
       </Content>
     </>
   )
