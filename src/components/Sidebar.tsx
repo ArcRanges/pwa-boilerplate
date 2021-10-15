@@ -15,14 +15,14 @@ export default function Sidebar(props: {
     <>
       {!collapsed && (
         <div
-          className="fixed bg-gray-700 w-full h-full z-10"
+          className="fixed bg-gray-700 w-full h-full z-10 top-0"
           style={{ opacity: collapsed ? 0 : 0.8, transition: 'all 0.2s ease' }}
           onClick={() => toggleSidebar(true)}
         ></div>
       )}
 
       <div
-        className="fixed bg-white h-full z-20"
+        className="fixed bg-white h-full z-20 top-0"
         style={{
           width: SIDEBAR_WIDTH,
           marginLeft: collapsed ? -SIDEBAR_WIDTH : 0,
