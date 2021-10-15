@@ -15,7 +15,7 @@ function App() {
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [appTheme])
+  }, [theme, appTheme])
 
   const setTheme = (theme: string) => {
     localStorage.setItem('theme', theme)
