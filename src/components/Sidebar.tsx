@@ -49,7 +49,7 @@ export default function Sidebar(props: {
           <li className="p-3 hover:opacity-50  rounded-md">Contact</li>
         </ul>
 
-        <div className="fixed bottom-0 p-3">
+        <div className="fixed bottom-20 p-3 ">
           <div className="flex flex-row justify-center items-center ">
             <button className="mr-2 hover:opacity-50" onClick={toggleDarkMode}>
               {sun}

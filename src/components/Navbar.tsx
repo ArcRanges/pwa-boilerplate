@@ -30,7 +30,7 @@ const Navbar = (props: {
   return (
     <>
       <div
-        className={`fixed justify-between items-center w-full bg-white p-5 shadow-md ${
+        className={`justify-between items-center w-full bg-white p-5 shadow-md ${
           windowWidth > SIZE_MD ? 'md:hidden' : 'flex'
         }`}
       >
