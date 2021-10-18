@@ -40,7 +40,7 @@ function App() {
         <Categories />
         <h4 className="font-bold text-blue-400">Hottest Products</h4>
         <div className="flex flex-wrap justify-between items-center">
-          <div className="w-1/2 p-1">
+          <div className="w-1/2 md:w-1/3 xl:w-1/4 p-1">
             <ProductCard
               img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/06/FIREOG2EDIT-768x768.jpg"
               name="Fyre OG AAAA"
@@ -48,7 +48,7 @@ function App() {
               salePrice="$80.99"
             />
           </div>
-          <div className="w-1/2 p-1">
+          <div className="w-1/2 md:w-1/3 xl:w-1/4 p-1">
             <ProductCard
               img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/07/TRAINWRECKEDIT2-400x400.jpg"
               name="Trainwreck AAAA"
@@ -56,7 +56,7 @@ function App() {
               salePrice="$80.99"
             />
           </div>
-          <div className="w-1/2 p-1">
+          <div className="w-1/2 md:w-1/3 xl:w-1/4 p-1">
             <ProductCard
               img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/09/DURBANPOISON1-400x400.jpg"
               name="Durban Poison AAAA"
@@ -64,14 +64,14 @@ function App() {
               salePrice="$80.99"
             />
           </div>
-          <div className="w-1/2 p-1">
+          <div className="w-1/2 md:w-1/3 xl:w-1/4 p-1">
             <ProductCard
               img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/03/MIXANDMATCH-400x400.jpg"
               name="Mix & Match - Concentrates 7x 1g"
               price="$140.99"
             />
           </div>
-          <div className="w-1/2 p-1">
+          <div className="w-1/2 md:w-1/3 xl:w-1/4 p-1">
             <ProductCard
               img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/09/PINKGASMASK1-400x400.jpg"
               name="Pink Gas Mask AAAA"
@@ -79,7 +79,7 @@ function App() {
               salePrice="$140.99"
             />
           </div>
-          <div className="w-1/2 p-1">
+          <div className="w-1/2 md:w-1/3 xl:w-1/4 p-1">
             <ProductCard
               img="https://i0.wp.com/sevenscannabis.co/wp-content/uploads/2021/03/MIXANDMATCH-400x400.jpg"
               name="Mix & Match - Concentrates 7x 1g"

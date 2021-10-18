@@ -18,7 +18,7 @@ export default function ProductCard({
           <small>Sale</small>
         </div>
       )}
-      <img src={img} alt="Product name" />
+      <img className="max-h-80" src={img} alt="Product name" />
       <h4 className="mt-2 font-bold truncate">{name}</h4>
       <i className="uil uil-star text-red-400"></i>
       <i className="uil uil-star text-red-400"></i>

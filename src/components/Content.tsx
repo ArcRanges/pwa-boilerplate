@@ -5,6 +5,6 @@ interface ContentProps {
 }
 
 const Content: React.VFC<ContentProps> = ({ children }) => {
-  return <div className="p-5">{children}</div>
+  return <div className="p-3">{children}</div>
 }
 export default Content
