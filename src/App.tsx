@@ -89,7 +89,7 @@ function App() {
         </div>
       </Content>
       <div className="w-full p-3 bg-gray-500 text-white">
-        <a href="https://github.com/ArcRanges" target="_blank">
+        <a href="https://github.com/ArcRanges" target="_blank" rel="noreferrer">
           <p className="text-center">Copyright (C) 2021 - Arc Ranges</p>
         </a>
       </div>
