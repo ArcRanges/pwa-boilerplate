@@ -6,7 +6,7 @@ import Scrollable from './Scrollable'
 export default function Categories() {
   return (
     <>
-      <h4 className="font-bold text-blue-400">Hot Categories</h4>
+      <h4 className="font-bold text-black">Hot Categories</h4>
       <Scrollable>
         <IconButton
           iconName="trees"

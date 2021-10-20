@@ -38,7 +38,7 @@ function App() {
       />
       <Content>
         <Categories />
-        <h4 className="font-bold text-blue-400">Hottest Products</h4>
+        <h4 className="font-bold text-black">Hottest Products</h4>
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-1/2 md:w-1/3 xl:w-1/4 p-1">
             <ProductCard
